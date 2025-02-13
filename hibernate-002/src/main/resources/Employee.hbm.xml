@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="entity.Employee" table="EMPLOYEE">
+      
+      <!-- Primary Key Mapping -->
+      <id name="id" type="int" column="ID">
+         <generator class="increment"/>
+      </id>
+
+      <!-- Employee First Name -->
+      <property name="firstName" column="FIRST_NAME" type="string" length="50" not-null="true"/>
+      
+      <!-- Employee Last Name -->
+      <property name="lastName" column="LAST_NAME" type="string" length="50" not-null="true"/>
+      
+      <!-- Employee Salary -->
+      <property name="salary" column="SALARY" type="int" not-null="true"/>
+      
+   </class>
+</hibernate-mapping>

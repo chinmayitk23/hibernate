@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Automatically updates the schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- MySQL Dialect (Use MySQL8Dialect if your MySQL version is 8.x) -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        
+        <!-- MySQL JDBC Driver -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+        <!-- Database Connection URL (Fixed special character issues) -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/demo?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
+        </property>
+
+        <!-- Database Credentials -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Chinmayi@23</property>
+
+        <!-- Show SQL queries in the console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapping File (Ensure the path is correct) -->
+        <mapping resource="Employee.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
