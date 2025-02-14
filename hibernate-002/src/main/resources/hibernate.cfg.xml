@@ -21,6 +21,6 @@
         <property name="hibernate.format_sql">true</property>
 
         <!-- Mapping File -->
-        <mapping resource="Employee.hbm.xml"/>
+         <mapping class="entity.Employee"/>
     </session-factory>
 </hibernate-configuration>
